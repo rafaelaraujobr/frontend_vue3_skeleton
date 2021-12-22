@@ -1,5 +1,6 @@
 <template>
   <q-page padding>
+    <!-- <q-calendar ref="calendar" v-model="selectedDate" /> -->
     <q-date
       flat
       bordered
@@ -84,6 +85,7 @@ export default {
     return {
       dialog: false,
       date: null,
+      selectedDate: "",
       events: [
         { date: "2021/12/01" },
         { date: "2021/12/05" },

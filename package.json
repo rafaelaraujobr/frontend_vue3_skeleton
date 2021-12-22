@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@quasar/quasar-ui-qcalendar": "^3.4.1",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "quasar": "^2.0.0",
     "register-service-worker": "^1.7.1",

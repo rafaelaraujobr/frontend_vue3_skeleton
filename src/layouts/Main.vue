@@ -11,6 +11,7 @@
           icon="menu"
         />
         <q-toolbar-title>app</q-toolbar-title>
+        <div>v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 

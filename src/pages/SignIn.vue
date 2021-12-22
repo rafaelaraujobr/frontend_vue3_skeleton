@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center login">
+  <q-page class="flex flex-center login bg-grey-2">
     <q-card
       flat
       :bordered="!$q.platform.is.mobile"
@@ -19,6 +19,7 @@
         <q-card-section class="q-gutter-sm q-pb-none">
           <q-input
             outlined
+            bg-color="white"
             v-model="form.username"
             placeholder="Informe o username ou email"
             clearable
@@ -41,6 +42,7 @@
             aria-autocomplete="password"
             clear-icon="mdi-close"
             outlined
+            bg-color="white"
             placeholder="Informe sua senha"
             v-model="form.password"
             ref="password"
@@ -118,7 +120,9 @@ export default {
       if (!this.form.password) throw "password empty";
       if (localStorage["ncl_store"]) localStorage.removeItem("ncl_store");
       try {
-        const encodedString = btoa(`${this.form.username}:${this.form.password}`);
+        const encodedString = btoa(
+          `${this.form.username}:${this.form.password}`
+        );
         const { data, status } = await this.$http.patch(
           "access-control/authentication",
           null,

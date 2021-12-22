@@ -24,6 +24,14 @@ export default [
                 },
             },
             {
+                path: 'store_profile',
+                name: 'StoreProfile',
+                component: () => import('@/pages/StoreProfile.vue'),
+                meta: {
+                    requiresAuth: true,
+                },
+            },
+            {
                 path: '/about',
                 name: 'About',
                 component: () => import(/* webpackChunkName: "about" */ '@/pages/About.vue'),

@@ -2,29 +2,30 @@
   <q-tabs
     v-model="tab"
     class="text-dark main-menu"
-    dense
     no-caps
     switch-indicator
-    :breakpoint="0"
-    align="justify"
+    align="center"
     :indicator-color="tab == 'register' ? 'transparent' : 'primary'"
     active-color="primary"
   >
+    <!-- style="max-width: 50px" -->
     <q-route-tab
       name="home"
       icon="mdi-view-dashboard-outline"
       to="/main"
       exact
-      label="Painel"
     />
+    <!-- label="Painel" -->
+    <q-route-tab icon="mdi-calendar" to="/schedule" exact name="" />
+    <!-- label="Agenda" -->
     <q-route-tab
-      icon="mdi-calendar"
+      icon="mdi-wallet-outline"
       to="/schedule"
       exact
-      label="Agenda"
-      name=""
+      name="register"
     />
-    <q-tab
+    <!-- label="Registrar" -->
+    <!-- <q-tab
       label="Registrar"
       class="item-menu-main"
       name="register"
@@ -39,21 +40,16 @@
         class="fixed"
         style="bottom: 25px; border: 4px solid white"
       />
-    </q-tab>
+    </q-tab> -->
     <q-route-tab
       name="performance"
       icon="mdi-chart-areaspline"
-      to="/performance"
+      to="/schedule"
       exact
-      label="Desemp"
     />
-    <q-route-tab
-      name="profile"
-      icon="mdi-store-outline"
-      to="/profile"
-      exact
-      label="Perfil"
-    />
+    <!-- label="Desemp" -->
+    <q-route-tab name="profile" icon="mdi-store-outline" to="/store_profile" exact />
+    <!-- label="Perfil" -->
   </q-tabs>
 </template>
 
@@ -73,7 +69,7 @@ export default {
   padding-top: 23px;
 }
 .main-menu .q-tab__label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
 }
 </style>
