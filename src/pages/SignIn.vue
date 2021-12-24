@@ -4,7 +4,7 @@
       flat
       :bordered="!$q.platform.is.mobile"
       :class="$q.platform.is.mobile ? 'q-pa-sm  transparent  ' : 'q-pa-md'"
-      :style="$q.platform.is.mobile ? `width: 100%` : `width: 420px`"
+      :style="$q.platform.is.mobile ? `width: 100%` : `width: 512px`"
     >
       <q-form @submit="submit()">
         <q-card-section

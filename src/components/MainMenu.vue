@@ -104,6 +104,22 @@ export default {
           children: [],
         },
         {
+          label: "SignIn",
+          type: "internal",
+          path: "/signin",
+          icon: "mdi-home",
+          caption: "",
+          children: [],
+        },
+        {
+          label: "SignUp",
+          type: "internal",
+          path: "/signup",
+          icon: "mdi-home",
+          caption: "",
+          children: [],
+        },
+        {
           label: "About",
           type: "internal",
           path: "/about",

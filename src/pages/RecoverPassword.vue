@@ -4,7 +4,7 @@
       flat
       :bordered="!$q.platform.is.mobile"
       :class="$q.platform.is.mobile ? 'q-pa-sm  transparent  ' : 'q-pa-md'"
-      :style="$q.platform.is.mobile ? `width: 100%` : `width: 420px`"
+      :style="$q.platform.is.mobile ? `width: 100%` : `width: 512px`"
     >
       <q-form @submit="submit()">
         <q-card-section
@@ -35,23 +35,26 @@
             </template>
           </q-input>
         </q-card-section>
-        <q-card-section>
-          <q-btn
-            unelevated
-            color="primary"
-            no-caps
-            type="submit"
-            class="full-width q-mb-md q-py-md"
-            label="Enviar"
-          />
-          <div class="row justify-between">
+        <q-card-section class="row q-col-gutter-x-sm">
+          <div class="col-3">
             <q-btn
               no-caps
               unelevated
-              flat
+              outline
+              color="primary"
+              class="q-mb-md q-py-md full-width"
               icon="mdi-arrow-left"
               to="/signin"
-              label="Voltar"
+            />
+          </div>
+          <div class="col-9">
+            <q-btn
+              unelevated
+              color="primary"
+              no-caps
+              type="submit"
+              class="full-width q-mb-md q-py-md"
+              label="Enviar"
             />
           </div>
         </q-card-section>
