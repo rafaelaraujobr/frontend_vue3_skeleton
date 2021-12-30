@@ -1,5 +1,5 @@
-@import './quasar.variables.scss';
-@import '~quasar-styl';
+@import "./quasar.variables.scss";
+@import "~quasar-styl";
 // @import '~quasar-addon-styl';
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
@@ -7,7 +7,18 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.q-field__bottom{
+.q-field__bottom {
     padding: 4px 2px 0;
     font-size: 11px;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateX(2em);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.3s ease;
 }

@@ -11,8 +11,12 @@ export default {
                 /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
             return emailPattern.test(val) || "Email invalido!";
         },
-        // isCnpj(val){
-            
-        // }
+
+        isNotNull(value) {
+            if (!value) return false;
+            if (Array.isArray(value) && value.length === 0) return false;
+            if (typeof value == "string" && !value.trim()) return false;
+            return true
+        }
     }
 };
